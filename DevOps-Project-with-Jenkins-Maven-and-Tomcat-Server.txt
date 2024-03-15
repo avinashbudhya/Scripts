@@ -59,7 +59,7 @@ $ mv apache-tomcat-9.0.76 tomcat
 $ ./startup.sh 
 $ find / -name context.xml
 $ vim /opt/tomcat/webapps/host-manager/META-INF/context.xml
-Need to add <!-- at start and --> at end to comment in xml
+Need to add <!-- at start and --> at end to comment in xml [ comment the 'Valve' part ]
 $ vim /opt/tomcat/webapps/manager/META-INF/context.xml
 $ ./shutdown.sh
 $ ./startup.sh
