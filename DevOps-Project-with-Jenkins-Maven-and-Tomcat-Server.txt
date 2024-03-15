@@ -1,4 +1,4 @@
-===============================Jenkins Installation==================================
+===============================Jenkins Installation================================== { Jenkins and Maven in one server and tomcat in second server ]
 https://www.jenkins.io/doc/book/installing/linux/
 https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 $ sudo yum update –y
@@ -20,10 +20,10 @@ https://maven.apache.org/install.html
 Copy the download link from https://maven.apache.org/download.cgi
 $ sudo su  & cd ~
 $ cd /opt
-$ wget https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.tar.gz
-$ tar -xzvf apache-maven-3.9.3-bin.tar.gz
+$ wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+$ tar -xzvf apache-maven-3.9.6-bin.tar.gz
 $ ls
-$ mv apache-maven-3.9.3 maven
+$ mv apache-maven-3.9.6 maven
 $ ll
 $ cd maven
 $ cd bin/
@@ -44,6 +44,7 @@ $ echo $PATH
 $ mvn -v
 Java Path -- /usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64 [ jdk -> JAVA_HOME ]
 MAVEN_HOME:/opt/maven     //You need to add this at Jenkins Job under Maven Installations [ by removing install automatically and specify MAVEN_HOME ]
+
 ===============================Setup Tomcat Server==================================
 $ sudo su
 $ cd ~
