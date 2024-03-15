@@ -42,7 +42,7 @@ $ echo $PATH
 $ source .bash_profile
 $ echo $PATH
 $ mvn -v
-Java Path -- /usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64
+Java Path -- /usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64 [ jdk -> JAVA_HOME ]
 MAVEN_HOME:/opt/maven     //You need to add this at Jenkins Job under Maven Installations [ by removing install automatically and specify MAVEN_HOME ]
 ===============================Setup Tomcat Server==================================
 $ sudo su
