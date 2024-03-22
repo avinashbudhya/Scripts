@@ -45,14 +45,24 @@ $ mvn -v
 Java Path -- /usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64
 MAVEN_HOME:/opt/maven     //You need to add this at Jenkins Job under Maven Installations
 ===============================Install and Configure Docker Host==================================
-# launch Docker-host server with proceed without key pair while launching instance
+# launch Docker-host server with proceed without key pair while launching instance and connect with instance connect
+$ sudo vi /etc/ssh/sshd_config
+$ sudo systemctl restart sshd
+$ sudo passwd ubuntu [give pwd as ubuntu]
 $ sudo apt update && sudo apt-get update
 $ sudo apt install docker.io
 $ sudo usermod -aG docker ubuntu
+$ sudo hostname Docker-Host
 $ sudo nano /etc/hostname
 $ sudo init 6
+[ go to Docker-Host security -> add inbound rules -> custom TCP -> Port no.:- 8086 -> anywhere ipv4 -> save]
+
 $ chown -R ubuntu:ubuntu /opt
+$ cd /opt
+$ mkdir Docker
 $ chown -R ubuntu:ubuntu /opt/Docker
+[ go to manage jenkins -> system -> publish over ssh -> add ssh servers -> name:Docker-Host -> hostname:- pub ip of Docker-Host server -> UN:ubuntu -> click use passwd authentication -> Passwd:- ubuntu -> apply -> save]
+
 $ cd /opt/Docker
 $ nano Dockerfile      //Below is the content of Dockerfile
 FROM tomcat:latest
