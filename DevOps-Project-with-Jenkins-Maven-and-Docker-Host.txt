@@ -62,7 +62,7 @@ $ cd /opt
 $ mkdir Docker
 $ chown -R ubuntu:ubuntu /opt/Docker
 [ go to manage jenkins -> system -> publish over ssh -> add ssh servers -> name:Docker-Host -> hostname:- pub ip of Docker-Host server -> UN:ubuntu -> click use passwd authentication -> Passwd:- ubuntu -> apply -> save]
-
+[ create a job -> give git repo -> post build actions-> send build artifacts over to ssh -> Docker-Host -> webapp/target/*.war -> webapp/target -> //opt//Docker --> apply -> save ]
 $ cd /opt/Docker
 $ nano Dockerfile      //Below is the content of Dockerfile
 FROM tomcat:latest
